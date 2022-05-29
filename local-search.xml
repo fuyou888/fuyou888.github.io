@@ -4,6 +4,32 @@
   
   
   <entry>
+    <title>hexo优化技巧-更有利于seo的纯数字文章链接</title>
+    <link href="/posts/2893685837/"/>
+    <url>/posts/2893685837/</url>
+    
+    <content type="html"><![CDATA[<p><strong>1. 待优化问题</strong></p><p>Hexo默认使用的文章永久链接格式是：year&#x2F;:month&#x2F;:day&#x2F;:title&#x2F;。这种链接，如果遇上个中文标题，就显示成这样：<a href="http://www.fuyouhao.cn/2022/05/29/%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E6%AF%94github%E9%80%9F%E5%BA%A6%E6%9B%B4%E5%BF%AB%E7%9A%84%E7%BA%AF%E5%85%8D%E8%B4%B9%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F-1/%EF%BC%8C%E8%BF%99%E6%A0%B7%E7%9A%84%E9%93%BE%E6%8E%A5%E5%BE%88%E4%B8%8D%E5%88%A9%E4%BA%8E%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E6%94%B6%E5%BD%95%E3%80%82">http://www.fuyouhao.cn/2022/05/29/如何创建比github速度更快的纯免费博客系统-1/，这样的链接很不利于搜索引擎收录。</a></p><p><strong>2.解决办法</strong></p><p>在博客根目录（执行hexo命令的地方）安装插件：npm install hexo-abbrlink –save 。</p><p>编辑站点配置文件</p><p>打开博客根目录下的<code>站点配置文件_config.yml</code>，修改如下配置：</p><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-meta">#permalink: :year/:month/:day/:title/</span><br><span class="hljs-meta">#permalink_defaults:</span><br><span class="hljs-symbol">permalink:</span> posts/:abbrlink/<br><span class="hljs-symbol">abbrlink:</span><br><span class="hljs-symbol">  alg:</span> crc32 <span class="hljs-meta">#support crc16(default) and crc32</span><br><span class="hljs-symbol">  rep:</span> dec   <span class="hljs-meta">#support dec(default) and hex</span><br></code></pre></td></tr></table></figure><p>提示，#permalink: :year&#x2F;:month&#x2F;:day&#x2F;:title&#x2F;和#permalink_defaults:是config文件里本来就有的内容，只需要前面加#注释掉即可，其他的不用改。</p><p>重新生成部署</p><p>使用<code>hexo clean &amp;&amp; hexo g</code>重新生成博客，就可实现如本博客文章一样的链接，如下这样<a href="https://www.fuyouhao.cn/posts/717519904/">https://www.fuyouhao.cn/posts/717519904/</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/posts/1/"/>
+    <url>/posts/1/</url>
+    
+    <content type="html"><![CDATA[<p>如何创建比github速度更快的纯免费博客系统</p><p>本博客使用的是hexo博客系统，起初使用的是github作为免费的博客空间使用，但是github速度不敢恭维，并且百度不收录，所以换用了现在使用的vercel.com，速度比github要快得多，并且可以被百度收录。下面说明具体方法。</p><p>1、注册vercel.com，注册的时候记得选择通过github，注册后会给你个类似xxx-github-io这样的域名</p><p>2、在本地安装好hexo（自己百度，略过），通过hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 来更新及上传博客文件到github服务器。</p><p>3、上传后，vercel.com网站会自动感知你的github文件发生了改变，再在vercel.com中操作，把github的内容传输到vercel.com，可以在vercel中的Preview Deployments操作visit选项来直接访问刚刚生成的域名，没问题后点击promote to production生成至正式的域名中，就是前文说的xxx-github-io这样的域名。如下图所示<img src="/images/111.jpg" alt="image-20220529131832271"></p><p>4、如果还想拥有自己的独立域名，可以通过域名提供商的解析操作来绑定到xxx-github-io这个域名，操作位置如下图所示<img src="/images/222.jpg" alt="image-20220529134841181"></p><p>另外，众所周知hexo文章写作及管理因为是markdown语法，所以非常的麻烦，可以通过hexo官方提供的一个叫admin的文章管理插件解决。最后欢迎留言讨论。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>如何创建比github速度更快的纯免费博客系统</title>
     <link href="/posts/717519904/"/>
     <url>/posts/717519904/</url>
