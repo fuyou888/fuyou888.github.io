@@ -17,19 +17,6 @@
   
   
   <entry>
-    <title></title>
-    <link href="/posts/1/"/>
-    <url>/posts/1/</url>
-    
-    <content type="html"><![CDATA[<p>如何创建比github速度更快的纯免费博客系统</p><p>本博客使用的是hexo博客系统，起初使用的是github作为免费的博客空间使用，但是github速度不敢恭维，并且百度不收录，所以换用了现在使用的vercel.com，速度比github要快得多，并且可以被百度收录。下面说明具体方法。</p><p>1、注册vercel.com，注册的时候记得选择通过github，注册后会给你个类似xxx-github-io这样的域名</p><p>2、在本地安装好hexo（自己百度，略过），通过hexo clean &amp;&amp; hexo g &amp;&amp; hexo s 来更新及上传博客文件到github服务器。</p><p>3、上传后，vercel.com网站会自动感知你的github文件发生了改变，再在vercel.com中操作，把github的内容传输到vercel.com，可以在vercel中的Preview Deployments操作visit选项来直接访问刚刚生成的域名，没问题后点击promote to production生成至正式的域名中，就是前文说的xxx-github-io这样的域名。如下图所示<img src="/images/111.jpg" alt="image-20220529131832271"></p><p>4、如果还想拥有自己的独立域名，可以通过域名提供商的解析操作来绑定到xxx-github-io这个域名，操作位置如下图所示<img src="/images/222.jpg" alt="image-20220529134841181"></p><p>另外，众所周知hexo文章写作及管理因为是markdown语法，所以非常的麻烦，可以通过hexo官方提供的一个叫admin的文章管理插件解决。最后欢迎留言讨论。</p>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>如何创建比github速度更快的纯免费博客系统</title>
     <link href="/posts/717519904/"/>
     <url>/posts/717519904/</url>
